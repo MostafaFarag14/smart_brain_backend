@@ -4,7 +4,7 @@
   "description": "",
   "main": "expressServer.js",
   "scripts": {
-    "start": "node",
+    "start": "node expressServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
