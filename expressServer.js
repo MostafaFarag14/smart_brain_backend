@@ -6,6 +6,7 @@ const login = require("./controllers/login");
 const register = require("./controllers/register");
 const image = require("./controllers/image");
 const app = express();
+const api = require("./api");
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const db = knex({
@@ -18,6 +19,7 @@ const db = knex({
 
 app.use(express.json());
 app.use(cors());
+app.use("/api/v1", api);
 
 app.get("/", (req, res) => {
   res.json("hello from server");
